@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-import { connectMongo } from "./db/mongo";
+//import { connectMongo } from "./db/mongo";
 import express from "express";
 
 dotenv.config();
@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
 });
 
 const startServer = async () => {
-  await connectMongo();
+  //await connectMongo();
   const PORT = process.env.PORT || 3000;
   app.listen(PORT, () => {
     console.log(`🚀 Server running  at http://localhost:${PORT}`);
